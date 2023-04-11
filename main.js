@@ -1,26 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
     let number = document.querySelector(".number").textContent;
-    const left = document.querySelector(".left");
-    const right = document.querySelector(".right");
-    const controls = document.querySelector(".controls");
+    const increase = document.querySelector(".increase");
     console.log(number);
 
     const storeCount = () => {
         localStorage.setItem("count", number);
     };
     
-    left.addEventListener("click", () => {
-        number--;
-    });
-    
-    right.addEventListener("click", () => {
+    increase.addEventListener("click", () => {
         number++;
-    });
-    
-    controls.addEventListener("click", () => {
+
         document.querySelector(".number").textContent = number;
         storeCount();
-        console.log(number);
     });
 
     if(localStorage.getItem("count")) {

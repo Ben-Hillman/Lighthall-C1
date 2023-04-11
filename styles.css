@@ -17,30 +17,24 @@ body {
 }
 
 .number {
+    margin-bottom: 1rem;
+
     font-size: 5rem;
     font-family: sans-serif;
+
+    border-bottom: 2px solid black;
 }
 
-.controls {
-    display: flex;
-
-    width: 200px;
-    border-top: 1px solid black;
-}
-
-.left,
-.right {
-    display: grid;
-    place-items: center;
+.increase {
     width: 100%;
-    height: 5rem;
+    padding: 1rem 0;
     font-size: 2rem;
     cursor: pointer;
 
+    background-color: transparent;
     transition: background-color 250ms ease-out;
 }
 
-.left:hover,
-.right:hover {
+.increase:hover {
     background-color: hsl(180, 50%, 50%, 0.2);
 }
